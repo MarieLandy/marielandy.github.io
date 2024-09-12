@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marie Landy - About</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000; /* Black font */
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #fff; /* White background */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Reduced space below header */
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #000; /* Black font */
+}
+header p {
+    font-size: 1em;
+    color: #333; /* Slightly lighter black for subtext */
+    margin: 0; /* Removed margin to reduce space */
+    line-height: 1.2; /* Adjusted line-height to further reduce space */
+}
+nav {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: #000; /* Black font for links */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize links */
+}
+nav a:hover {
+    text-decoration: underline;
+}
+section {
+    margin-bottom: 20px;
+}
+h2 {
+    color: #000; /* Black font for section headers */
+    font-size: 1.5em;
+    padding: 10px 0;
+    margin-top: 0;
+    text-transform: uppercase; /* Capitalize subtitles */
+}
+.about-content {
+    display: flex;
+    flex-direction: row; /* Ensure children are laid out in a row */
+    gap: 40px; /* Space between headshot and text */
+}
+.headshot {
+    flex: 0 0 400px; /* Adjusted width for headshot */
+    height: auto; /* Maintain aspect ratio */
+}
+.headshot img {
+    width: 100%; /* Ensure the image fits within the container */
+    height: auto;
+    display: block;
+}
+.bio-credits {
+    flex: 1; /* Allow the bio and credits to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Further reduced space between bio and credits */
+}
+.description {
+    text-align: justify; /* Justify the text */
+    font-size: 0.95em; /* Font size for the biography */
+    line-height: 1.4; /* Line height for paragraphs */
+    color: #000; /* Black color for text */
+}
+.description h2 {
+    margin: 5px 0; /* Reduced margin for section headers */
+}
+.description p {
+    line-height: 1.4; /* Line height for paragraphs */
+    margin: 0 0 5px 0; /* Further reduced margin between paragraphs */
+}
+.credits {
+    text-align: justify; /* Match text alignment with description */
+    font-size: 0.95em; /* Font size to match description */
+    line-height: 1.4; /* Line height to match description */
+    color: #000; /* Black color for text */
+    padding-left: 0px; /* Align with padding in the biography */
+}
+.credits h2 {
+    font-size: 1.5em; /* Match font size with section headers */
+    color: #000; /* Black color for header */
+    margin: 5px 0; /* Margin to match section headers */
+}
+.credits p {
+    margin: 0 0 5px 0; /* Reduced margin for paragraphs */
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .about-content {
+        flex-direction: column; /* Stack headshot and text on smaller screens */
+        align-items: flex-start;
+    }
+    .headshot {
+        width: 100%; /* Full width for smaller screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Marie Landy</h1>
+                <p>Production Manager | Theatre, Entertainment & Fashion | Melbourne/Naarm</p>
+            </div>
+            <nav>
+                <a href="work.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        
+        <section id="about">
+            <div class="about-content">
+                <div class="headshot">
+                    <img src="https://marielandy.github.io/Headshot.jpeg" alt="Headshot">
+                </div>
+                <div class="bio-credits">
+                    <div class="description">
+			<h2>About</h2>
+                        <p>Marie Landy is an emerging international production manager.</p>
+                        <p>Nurtured by a passion for storytelling through crafts and performance, Marie uses her Master’s in Business Management to contribute to design, artistic, and performance projects, all while maintaining a commitment to creative excellence and operational efficiency.</p>
+                        <p>Marie’s career began in France, where she collaborated with national cultural institutions, the prestigious fashion house <i>Hermès</i>, and <i>Walt Disney Imagineering</i>. Her diverse experiences across these influential sectors honed her skills in managing multifaceted projects, coordinating cross-functional teams, and developing a deep understanding of various artistic disciplines, including technical, design, and logistical elements.</p>
+                        <p>Recently, Marie has embraced a new chapter by relocating from Paris to Melbourne. This move marks an exciting transition as she integrates into the vibrant theatre community, where she has already made notable contributions through collaborations with <i>Theatrical</i>, <i>AG Theatre</i>, <i>CGTC</i>, and <i>Reaction Theatre</i> for La Mama's Mother Tongue Festival.</p>
+                        <p>Marie is eager to engage in collaborations across diverse artistic fields and is driven to undertake both local and international projects.</p>
+                    </div>
+                    <div class="credits">
+                        <h2>Credits</h2>
+                        <p><strong>2024</strong></p>
+                        <p><i>The Three Little Pigs</i>, Production Manager, dir. Tahra Cannon, produced by <i>AG Theatre</i> at The National Theatre, Melbourne.</p>
+                        <p><i>La Souris Blanche</i>, Costumes/Props/Assistant Set, dir. Louise Howlett, produced by <i>ReAction Theatre</i> at La Mama Courthouse, Melbourne.</p>
+                        <p><i>A Chorus Line</i>, Production Manager, dir. Tahra Cannon, produced by <i>Theatrical</i> at The National Theatre, Melbourne.</p>
+                        <p><i>The Boy From Oz</i>, Design Coordinator, dir. Rhylee Nowell, produced by <i>Theatrical</i> at The National Theatre, Melbourne.</p>
+                        <p><i>Paper Lanterns Paper Cranes</i>, Set/Props, dir. Oscar Lanigan, produced by <i>CGTC</i> at Camberwell Performing Arts Center, Melbourne.</p>
+                        <p><i>The Sound Of Music</i>, Props/Stagehand, dir. Karen Shnider, produced by <i>Theatrical</i> at The National Theatre, Melbourne.</p>
+                        <p><strong>2023</strong></p>
+                        <p><i>Disneyland Paris 2025 Expansion</i>, Project Coordinator, <i>Walt Disney Imagineering</i>, Paris.</p>
+                        <p><strong>2022</strong></p>
+                        <p><i>AH23 Hermès Showroom</i>, Set Design Production Assistant, <i>Hermès</i>, Paris.</p>
+                        <p><strong>2020-2021</strong></p>
+                        <p>Project Coordinator, <i>Artips</i>, Paris.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
