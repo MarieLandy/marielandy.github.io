@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORK - Marie Landy</title>
+    <style>
+        
+       body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Consistent margin below header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #000; /* Black font */
+}
+
+header p {
+    font-size: 1em;
+    color: #333; /* Slightly lighter black for subtext */
+    margin: 0; /* Removed margin to reduce space */
+    line-height: 1.2; /* Adjusted line-height to further reduce space */
+}
+
+nav {
+    display: flex;
+    gap: 15px; /* Space between navigation links */
+}
+
+nav a {
+    color: #000; /* Black font for links */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize links */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #fff; /* White background */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.project-details {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.photo-gallery-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.photo-gallery {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.photo-gallery img.active {
+    display: block;
+}
+
+.thumbnail-navigation {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.thumbnail-wrapper {
+    flex: 1;
+    overflow: hidden;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 5px;
+    transition: transform 0.3s ease;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.thumbnail-container img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.thumbnail-container img.active {
+    border-color: #333;
+}
+
+.credits {
+    width: 45%;
+    padding-left: 20px; /* Adjusted padding to fit the layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.credits h2 {
+    margin-top: 0;
+}
+
+.credits h4 {
+    margin-top: 0;
+}
+
+.credits ul {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.credits ul li {
+    margin: 0;
+}
+
+.credits p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Ensure the navigation arrows are visible and accessible */
+.navigation-arrows {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.navigation-arrows .nav-arrow {
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2em;
+    border: none;
+    position: relative;
+}
+
+.navigation-arrows .nav-arrow:hover {
+    background-color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Marie Landy</h1>
+                <p>Production Manager | Theatre, Entertainment & Fashion | Melbourne/Naarm</p>
+            </div>
+            <nav>
+                <a href="work.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </header>
+
+        <div class="project-container">
+            <!-- Project 1 -->
+            <div class="project-details">
+                <div class="photo-gallery-container">
+                    <div class="photo-gallery">
+                        <img src="https://marielandy.github.io/the-three-little-pigs.jpeg" alt="Project 1 Image 1" class="active">
+                        <!-- Add more images for Project 1 here -->
+                    </div>
+                    <div class="thumbnail-navigation">
+                        <button class="nav-arrow left" onclick="prevThumbnail()">&#10094;</button>
+                        <div class="thumbnail-wrapper">
+                            <div class="thumbnail-container">
+                                <img src="https://marielandy.github.io/the-three-little-pigs.jpeg" alt="Thumbnail 1" onclick="showImage(0)">
+                                <!-- Add more thumbnails here -->
+                            </div>
+                        </div>
+                        <button class="nav-arrow right" onclick="nextThumbnail()">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Credits for Project 1 -->
+                <div class="credits">
+                    <h2>THE THREE LITTLE PIGS, Production Manager</h2>
+                    <p>Coming.</p>
+                    <br><br>
+                    <p><strong>PRODUCTION TEAM</strong></p>
+                    <p><strong>Director</strong> - Tahra Cannon</p>
+                    <p><strong>Choreographer</strong> - Louise Panagiotidis</p>
+                    <p><strong>Set Design</strong> - Abbey Stanway</p>
+                    <p><strong>Costume Design</strong> - Karen Spencer</p>
+                    <p><strong>Lighting Design</strong> - Max Woods</p>
+                    <p><strong>Production Manager</strong> - Marie Landy</p>
+                    <p><strong>Stage Manager</strong> - Coming.</p>
+                    <p><strong>Executive Producer</strong> - Andrew Gyopar</p>
+                    <br>
+                    <p><strong>AG Theatre, December 2024, National Theatre, Melbourne.</strong></p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-details">
+                <div class="photo-gallery-container">
+                    <div class="photo-gallery">
+                        <img src="https://marielandy.github.io/a-chorus-line.jpeg" alt="A Chorus Line Image 1" class="active">
+                        <!-- Add more images for Project 2 here -->
+                    </div>
+                    <div class="thumbnail-navigation">
+                        <button class="nav-arrow left" onclick="prevThumbnail()">&#10094;</button>
+                        <div class="thumbnail-wrapper">
+                            <div class="thumbnail-container">
+                                <img src="https://marielandy.github.io/a-chorus-line.jpeg" alt="Thumbnail 1" onclick="showImage(0)">
+                                <!-- Add more thumbnails here for Project 2 -->
+                            </div>
+                        </div>
+                        <button class="nav-arrow right" onclick="nextThumbnail()">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Credits for Project 2 -->
+                <div class="credits">
+                    <h2>A CHORUS LINE, Production Manager</h2>
+                    <p>Audition Process</p>
+                    <p>Rehearsal Management</p>
+                    <p>Set Design & Set Building Supervision</p>
+                    <p>Props Sourcing Supervision</p>
+                    <p>Bump-In & Bump-Out Management</p>
+                    <br><br>
+                    <p><strong>PRODUCTION TEAM</strong></p>
+                    <p><strong>Director</strong> - Tahra Cannon</p>
+                    <p><strong>Musical Director</strong> - Gabriel Taburet</p>
+                    <p><strong>Choreographer</strong> - Louise Panagiotidis</p>
+                    <p><strong>Assistant Musical Director</strong> - Jess McCallum</p>
+                    <p><strong>Set Design</strong> - Abbey Stanway</p>
+                    <p><strong>Costume Design</strong> - Karen Spencer</p>
+                    <p><strong>Lighting Design</strong> - Max Woods</p>
+                    <p><strong>Production Manager</strong> - Marie Landy</p>
+                    <p><strong>Stage Manager</strong> - Chloe Goldsmith</p>
+                    <p><strong>Executive Producer</strong> - Andrew Gyopar</p>
+                    <br>
+                    <p><strong>THEATRICAL, Sept. 2024, National Theatre, Melbourne.</strong></p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-details">
+                <div class="photo-gallery-container">
+                    <div class="photo-gallery">
+                        <img src="https://marielandy.github.io/paper-lanterns-paper-cranes.jpeg" alt="Paper Lanterns Paper Cranes" class="active">
+                        <!-- Add more images for Project 3 here -->
+                    </div>
+                    <div class="thumbnail-navigation">
+                        <button class="nav-arrow left" onclick="prevThumbnail()">&#10094;</button>
+                        <div class="thumbnail-wrapper">
+                            <div class="thumbnail-container">
+                                <img src="https://marielandy.github.io/paper-lanterns-paper-cranes.jpeg" alt="Thumbnail 1" onclick="showImage(0)">
+                                <!-- Add more thumbnails here for Project 3 -->
+                            </div>
+                        </div>
+                        <button class="nav-arrow right" onclick="nextThumbnail()">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Credits for Project 3 -->
+                <div class="credits">
+                    <h2>PAPER LANTERNS PAPER CRANES, Set/Props/Stagehand</h2>
+                    <p>Set Design & Set Building Supervision</p>
+                    <p>Props Sourcing</p>
+                    <p>Fly in Operation</p>
+                    <br><br>
+                    <p><strong>PRODUCTION TEAM</strong></p>
+                    <p><strong>Director & Choreographer</strong> - Oscar Lanigan</p>
+                    <p><strong>Set/Props Design</strong> - Ishan Vivekanantham & Marie Landy</p>
+                    <p><strong>Costume Design</strong> - Ishan Vivekanantham</p>
+                    <p><strong>Lighting Design</strong> - Cyrus Chan & Dylan Orpin</p>
+                    <p><strong>Sound Design</strong> - Phuong Lam</p>
+                    <p><strong>Stage Manager</strong> - Sarah Riipa</p>
+                    <p><strong>Producers</strong> - Emily Brown, Lucy Butler & Adam Porrett</p>
+                    <br>
+                    <p><strong>CGTC, July 2024, Performing Arts Center - Camberwell Grammar School, Melbourne.</strong></p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-details">
+                <div class="photo-gallery-container">
+                    <div class="photo-gallery">
+                        <img src="https://marielandy.github.io/the-boy-from-oz.jpeg" alt="The Boy From Oz" class="active">
+                        <!-- Add more images for Project 4 here -->
+                    </div>
+                    <div class="thumbnail-navigation">
+                        <button class="nav-arrow left" onclick="prevThumbnail()">&#10094;</button>
+                        <div class="thumbnail-wrapper">
+                            <div class="thumbnail-container">
+                                <img src="https://marielandy.github.io/the-boy-from-oz.jpeg" alt="Thumbnail 1" onclick="showImage(0)">
+                              <img src="/Users/marielandy/Documents/the-boy-from-oz-1.jpg" alt="Thumbnail 1" onclick="showImage(0)">
+<img src="/Users/marielandy/Documents/the-boy-from-oz-2.jpg" alt="Thumbnail 1" onclick="showImage(0)">  
+
+
+<!-- Add more thumbnails here for Project 4 -->
+                            </div>
+                        </div>
+                        <button class="nav-arrow right" onclick="nextThumbnail()">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Credits for Project 4 -->
+                <div class="credits">
+                    <h2>THE BOY FROM OZ, Design Coordinator</h2>
+                    <p>Set Design & Set Building Supervision</p>
+                    <p>Props Sourcing Supervision</p>
+                    <p>Bump-In & Bump-Out Management</p>
+                    <br><br>
+                    <p><strong>PRODUCTION TEAM</strong></p>
+                    <p><strong>Director/Choreographer</strong> - Rhylee Nowell</p>
+                    <p><strong>Musical Director</strong> - Alex Byrne</p>
+                    <p><strong>Musical Supervisor</strong> - Matthew Hadgraft</p>
+                    <p><strong>Assistant Choreographer</strong> - Ellie Martin</p>
+                    <p><strong>Set Design</strong> - Abbey Stanway</p>
+                    <p><strong>Costume Design</strong> - Karen Spencer</p>
+                    <p><strong>Lighting Design</strong> - Max Woods</p>
+                    <p><strong>Production Coordinator</strong> - Caitlin Greenhill</p>
+                    <p><strong>Stage Manager</strong> - Chloe Goldsmith</p>
+                    <p><strong>Executive Producer</strong> - Andrew Gyopar</p>
+                    <br>
+                    <p><strong>THEATRICAL, July 2024, National Theatre, Melbourne.</strong></p>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-details">
+                <div class="photo-gallery-container">
+                    <div class="photo-gallery">
+                        <img src="https://marielandy.github.io/the-sound-of-music.jpeg" alt="The Sound of Music" class="active">
+                        <!-- Add more images for Project 5 here -->
+                    </div>
+                    <div class="thumbnail-navigation">
+                        <button class="nav-arrow left" onclick="prevThumbnail()">&#10094;</button>
+                        <div class="thumbnail-wrapper">
+                            <div class="thumbnail-container">
+                                <img src="https://marielandy.github.io/the-sound-of-music.jpeg" alt="Thumbnail 1" onclick="showImage(0)">
+                                <!-- Add more thumbnails here -->
+                            </div>
+                        </div>
+                        <button class="nav-arrow right" onclick="nextThumbnail()">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Credits for Project 5 -->
+                <div class="credits">
+                    <h2>THE SOUND OF MUSIC, Props/Stagehand</h2>
+                    <p>Props making & sourcing</p>
+                    <br><br>
+                    <p><strong>PRODUCTION TEAM</strong></p>
+                    <p><strong>Director</strong> - Karen Shnider</p>
+                    <p><strong>Musical Director</strong> - Kent Ross</p>
+                    <p><strong>Musical Supervisor</strong> - Suzie Pappas</p>
+                    <p><strong>Assistant Musical Director</strong> - Alex Byrne</p>
+                    <p><strong>Set Design</strong> - Bianca Pardo</p>
+                    <p><strong>Costume Design</strong> - Karen Spencer</p>
+                    <p><strong>Lighting Design</strong> - Max Woods</p>
+                    <p><strong>Stage Manager</strong> - Chloe Goldsmith</p>
+                    <p><strong>Executive Producer</strong> - Andrew Gyopar</p>
+                    <br>
+                    <p><strong>THEATRICAL, March 2024, National Theatre, Melbourne.</strong></p>
+                </div>
+            </div>
+
+            <div class="navigation-arrows">
+                <button class="nav-arrow left" onclick="prevProject()">&#10094;</button>
+                <button class="nav-arrow right" onclick="nextProject()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentProjectIndex = 0;
+        const projects = document.querySelectorAll('.project-details');
+        const totalProjects = projects.length;
+
+        function showProject(index) {
+            projects.forEach((project, i) => {
+                project.style.display = (i === index) ? 'flex' : 'none';
+            });
+            currentProjectIndex = index;
+            currentImageIndex = 0; // Reset image index for new project
+            showImage(currentImageIndex); // Show first image of the new project
+        }
+
+        function nextProject() {
+            currentProjectIndex = (currentProjectIndex + 1) % totalProjects;
+            showProject(currentProjectIndex);
+        }
+
+        function prevProject() {
+            currentProjectIndex = (currentProjectIndex - 1 + totalProjects) % totalProjects;
+            showProject(currentProjectIndex);
+        }
+
+        function showImage(index) {
+            const currentProject = projects[currentProjectIndex];
+            const images = currentProject.querySelectorAll('.photo-gallery img');
+            const thumbnails = currentProject.querySelectorAll('.thumbnail-container img');
+            const totalImages = images.length;
+
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+            thumbnails.forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+            updateThumbnailPosition();
+        }
+
+        function nextThumbnail() {
+            const currentProject = projects[currentProjectIndex];
+            const images = currentProject.querySelectorAll('.photo-gallery img');
+            const totalImages = images.length;
+
+            currentImageIndex = (currentImageIndex + 1) % totalImages;
+            showImage(currentImageIndex);
+        }
+
+        function prevThumbnail() {
+            const currentProject = projects[currentProjectIndex];
+            const images = currentProject.querySelectorAll('.photo-gallery img');
+            const totalImages = images.length;
+
+            currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+            showImage(currentImageIndex);
+        }
+
+        function updateThumbnailPosition() {
+            const currentProject = projects[currentProjectIndex];
+            const thumbnailsContainer = currentProject.querySelector('.thumbnail-container');
+            const thumbnailWidth = currentProject.querySelector('.thumbnail-container img').offsetWidth;
+            const visibleThumbnails = Math.floor(currentProject.querySelector('.thumbnail-wrapper').offsetWidth / thumbnailWidth);
+
+            const leftOffset = Math.min(
+                Math.max(0, currentImageIndex - Math.floor(visibleThumbnails / 2)),
+                Math.max(0, thumbnailsContainer.children.length - visibleThumbnails)
+            ) * thumbnailWidth;
+
+            thumbnailsContainer.style.transform = `translateX(-${leftOffset}px)`;
+        }
+
+        // Initialize
+        showProject(currentProjectIndex);
+    </script>
+</body>
+</html>
